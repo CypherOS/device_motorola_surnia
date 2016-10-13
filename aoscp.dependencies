@@ -1,0 +1,20 @@
+[
+  {
+    "repository":  "device_motorola_msm8916-common",
+    "target_path": "device/motorola/msm8916-common",
+    "remote":      "aoscp",
+    "branch":      "n7.0"
+  },
+  {
+    "repository":  "android_kernel_motorola_msm8916",
+    "target_path": "kernel/motorola/msm8916",
+    "remote":      "cm",
+    "branch":      "cm-14.0"
+  },
+  {
+    "repository":  "proprietary_vendor_motorola",
+    "target_path": "vendor/motorola",
+    "remote":      "aoscp",
+    "branch":      "n7.0"
+  }
+]
