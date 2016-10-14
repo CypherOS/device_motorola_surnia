@@ -2,7 +2,7 @@
   {
     "repository":  "device_motorola_msm8916-common",
     "target_path": "device/motorola/msm8916-common",
-    "remote":      "aoscp",
+    "remote":      "cypher",
     "branch":      "n7.0"
   },
   {
@@ -14,7 +14,7 @@
   {
     "repository":  "proprietary_vendor_motorola",
     "target_path": "vendor/motorola",
-    "remote":      "aoscp",
+    "remote":      "cypher",
     "branch":      "n7.0"
   }
 ]
