@@ -12,9 +12,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-def IncrementalOTA_Assertions(info):
-  AddAssertion(info)
-
 def IncrementalOTA_VerifyBegin(info):
   # Workaround for apn list changes
   RestoreApnList(info)
@@ -22,25 +19,8 @@ def IncrementalOTA_VerifyBegin(info):
 def IncrementalOTA_InstallEnd(info):
   ReplaceApnList(info)
 
-def FullOTA_Assertions(info):
-  AddAssertion(info)
-
 def FullOTA_InstallEnd(info):
   ReplaceApnList(info)
-
-
-def AddAssertion(info):
-  info.script.AppendExtra('if getprop("ro.boot.carrier") == "sprint" && getprop("ro.boot.fsg-id") == "" then')
-  info.script.AppendExtra('ui_print("Sprint CDMA variant detected!");')
-  info.script.AppendExtra('ui_print("Reboot into Bootloader Mode, connect your device to PC and from PC terminal type:");')
-  info.script.AppendExtra('ui_print("fastboot oem config fsg-id boost    if you are a Boost Mobile user");')
-  info.script.AppendExtra('ui_print("fastboot oem config fsg-id frdm     if you are a FreedomPop user");')
-  info.script.AppendExtra('ui_print("fastboot oem config fsg-id ringplus if you are a RingPlus user");')
-  info.script.AppendExtra('ui_print("fastboot oem config fsg-id sprint   if you are a Sprint user or not listed");')
-  info.script.AppendExtra('ui_print("fastboot oem config fsg-id virgin   if you are a Virgin Mobile user");')
-  info.script.AppendExtra('ui_print("and then flash CyanogenMod again");')
-  info.script.AppendExtra('abort("**********");')
-  info.script.AppendExtra('endif;')
 
 def ReplaceApnList(info):
   info.script.AppendExtra('if getprop("ro.boot.radio") == "0x3" then')
