@@ -14,7 +14,7 @@
   {
     "repository":  "proprietary_vendor_motorola",
     "target_path": "vendor/motorola",
-    "remote":      "cypher",
-    "branch":      "n7.0"
+    "remote":      "tm",
+    "branch":      "cm-14.0"
   }
 ]
