@@ -516,7 +516,8 @@
 	</path>
 
 	<path name="voice-hac-handset">
-		<path name="handset" />
+		<path name="speaker" />
+		<ctl name="RX3 Digital Volume" value="75" />
 	</path>
 
 	<path name="handset-mic">
@@ -559,7 +560,8 @@
 	</path>
 
 	<path name="voice-handset">
-		<path name="handset" />
+		<path name="speaker" />
+		<ctl name="RX3 Digital Volume" value="65" />
 	</path>
 
 	<path name="voice-speaker">
