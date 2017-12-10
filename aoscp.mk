@@ -15,6 +15,10 @@
 
 $(call inherit-product, device/motorola/surnia/full_surnia.mk)
 
+# Inherit common Android Go configurations
+#$(call inherit-product, build/target/product/go_defaults.mk)
+ 
+
 # Boot animation
 TARGET_SCREEN_WIDTH := 540
 TARGET_SCREEN_HEIGHT := 960
